@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores</title>
+  
+</head>
+<body>
+    <input type="number" id="n1"> + <input type="number" id="n2">
+    <button onclick="somar()">SOMAR</button>
+
+    <div id="resultado"></div>
+
+  <script>
+    function somar(){
+        let n1 = document.getElementById('n1')
+        let number1 = Number(n1.value)
+
+        let n2 = document.getElementById('n2')
+        let number2 = Number(n2.value)
+
+        let resultado = document.getElementById('resultado')
+
+        let soma = number1 + number2        
+
+        if(soma < 10){
+            resultado.innerHTML = `Total: ${soma}. Menos de 10`
+        } else{
+            resultado.innerHTML = `Total: ${soma}`
+        }
+    }
+  </script>
+</body>
+</html>

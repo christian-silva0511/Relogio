@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="exercicio3">
+    <header>
+        <h1>Contador de cliques 🧮</h1>
+    </header>
+    <section>
+        <div>
+            <input type="button" value="Cliques" onclick="clique()">
+            <input type="button" value="Resetar" onclick="reset()">
+        </div>
+        <div id="resultado">Clique para começar a contar.</div>        
+    </section>
+
+    <script>
+        let cliques = 0;
+        let resultado = document.getElementById('resultado')
+
+        function clique(){            
+            cliques++
+            resultado.innerHTML = `Você clicou ${cliques} vezes!`
+        }
+
+        function reset(){
+            cliques = 0
+            resultado.innerHTML = `Contador Zerado! Comece de novo.`
+        }
+
+    </script>
+    
+</body>
+</html>

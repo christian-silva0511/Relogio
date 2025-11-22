@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="exercicio3">
+    <header>
+        <h1>Verificar idade</h1>
+    </header>
+    <section>
+        <div>
+            <span>
+                Ano de nascimento:
+                <input type="number" name="txtano" id="txtano">                
+            </span>
+            <span>
+                Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </span>
+            <span>
+                <input type="button" value="Verificar" onclick="verificar ()">
+            </span>
+        </div>
+        <div id="resultado"></div>
+    </section>
+
+    <script>
+        function verificar (){
+            let txtano = document.getElementById('txtano')
+            let ano = Number(txtano.value)
+            let resultado = document.getElementById('resultado')
+            let data = new Date()
+            let anoAtual = data.getFullYear();
+            let idade = anoAtual - ano
+            let fsex = document.getElementsByName('radsex')
+            let img = document.createElement('img')
+            img.setAttribute('id', 'foto')
+
+            resultado.innerHTML = `Você tem ${idade} anos!`
+
+            if (fsex[0].checked && idade < 3){
+                resultado.innerHTML = `Homem bebe de ${idade} anos!`                 
+                img.setAttribute('src', 'img/homem-bebe.jpg')
+                img.setAttribute('alt', 'testando o alt...')
+                resultado.appendChild(img)
+                
+            } else if (fsex[0].checked && idade >= 18){
+                resultado.innerHTML = `Homem jovem de ${idade} anos!`
+            }
+                     
+        }
+    </script>
+    
+</body>
+</html>

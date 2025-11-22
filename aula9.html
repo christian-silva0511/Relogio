@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <span>Esta aula pode ser conferida aqui: https://www.youtube.com/watch?v=WWZX8RWLxIk&list=PLmRz6JukPwWNZ8xdJ0CBNNIEv9PHIAE7G&index=9</span>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS.</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        // Acessando elementos do HTML
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')        
+        var titulo = window.document.getElementsByTagName('h1')[0]
+
+        // Alterando propriedades do CSS 
+        d.style.background = 'green'
+        titulo.style.background = 'red'
+
+        // Alterando elementos do HTML 
+        titulo.innerText = 'Titulo H1 alterado!'
+    </script>
+</body>
+</html>

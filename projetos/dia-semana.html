@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições - Parte 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="link-aula">
+        <a href="https://www.youtube.com/watch?v=EEStcIe8rAM&list=PLmRz6JukPwWNZ8xdJ0CBNNIEv9PHIAE7G&index=12" target="_blank">Link da aula</a>
+    </div>
+
+    <h1>Verifica dia da semana com Switch</h1>
+    Digite um número <input type="number" placeholder="Digite um número" id="numero" onclick="numero ()">
+    <div id="resultado"></div>
+
+       
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        
+        switch(diaSem){
+            case 0:
+                console.log('Domingo')
+                break
+            case 1:
+                console.log('Segunda')
+                break
+            case 2:
+                console.log('Terça')
+                break
+            case 3:
+                console.log('Quarta')
+                break
+            case 4:
+                console.log('Quinta')
+                break
+            case 5:
+                console.log('Sexta')
+                break
+            case 6:
+                console.log('Sábado')
+                break
+        }
+        
+    </script>
+</body>
+</html>

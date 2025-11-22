@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="exercicio3">
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número: <input type="number" name="num" id="txtn">
+            <input type="button" value="Gerar tabuada" onclick="tabuada()"></p>
+        </div>
+        <div id="mensagem"></div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um valor</option>
+            </select>
+        </div>
+    </section>
+
+    <script>
+        function tabuada(){
+            let number = document.getElementById('txtn')
+            let lista = document.getElementById('seltab')
+            let mensagem = document.getElementById('mensagem')
+
+            if (number.value.length == 0){
+                mensagem.innerHTML = `Digite um valor`
+                mensagem.classList.add('erro')
+            } else{
+                lista.innerHTML = ''
+                mensagem.innerHTML = ''
+                let num = Number(number.value)
+                for (let c = 1; c <= 10; c++){
+                    let item = document.createElement('option')
+                    item.text = `${num} x ${c}= ${num*c}`
+                    lista.appendChild(item)
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

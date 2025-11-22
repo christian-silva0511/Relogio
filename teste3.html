@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Cliques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Contador de Cliques</h1>
+  <p>Você clicou <span id="contador">0</span> vezes.</p>
+  <button id="botao" onclick="somar()">Clique aqui!</button>
+
+  <script>
+    let contador = 0
+    function somar() {
+        contador++;
+        document.getElementById('contador').textContent = contador;
+    }
+  </script>
+</body>
+</html>

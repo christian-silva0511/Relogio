@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="exercicio3">
+    <header>
+        <h1>Abas</h1>
+    </header>
+    <section class="abas">
+        <div id="aba1">
+            <a href="#" class="aba" onclick="alterarAbas()">Aba 1</a>
+        </div>
+        <div id="aba2">
+            <a href="#" class="aba" onclick="alterarAbas()">Aba 2</a>
+        </div>
+    </section>
+
+    <script>
+        function alterarAbas(){
+            let aba = document.querySelectorAll('.aba')
+            aba.classList.add('active')            
+        }
+    </script>    
+</body>
+</html>

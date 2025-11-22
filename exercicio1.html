@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="exercicio1">
+    <header>
+        <h1>Título</h1>
+    </header>
+    <section>
+        <div id="hora">
+            <input type="text" id="valor-hora" placeholder="Digite um valor até 24">
+            <input type="button" value="Buscar" onclick="carregar()">
+        </div>
+        <div id="msg">
+            
+        </div>       
+        <div id="foto">
+            <img id="imagem" src="img/fotonoite.jpg">
+        </div>
+    </section>
+    <footer>
+        <p>Curso em vídeo</p>
+    </footer>           
+    <script>
+        function carregar(){
+            let valorHora = document.getElementById('valor-hora')
+            let msg = document.getElementById('msg')
+            let img = document.getElementById('imagem')
+            let fundo = document.getElementById('exercicio1')
+            // let data = new Date()
+            let hora = Number(valorHora.value)
+            
+            if (hora >= 0 && hora < 12){
+                // BOM DIA
+                img.src = 'img/fotomanha.jpg'
+                fundo.classList.add('cor-manha')
+                fundo.classList.remove('cor-tarde')
+                fundo.classList.remove('cor-noite')
+                msg.innerHTML = `Agora são ${hora} horas do dia!`
+            } else if (hora >= 12 && hora < 18) {
+                // BOA TARDE
+                img.src = 'img/fototarde.jpg'
+                fundo.classList.add('cor-tarde')
+                fundo.classList.remove('cor-manha')
+                fundo.classList.remove('cor-noite')
+                msg.innerHTML = `Agora são ${hora} horas da tarde!`
+            } else{
+                // BOA NOITE
+                img.src = 'img/fotonoite.jpg'
+                fundo.classList.add('cor-noite')
+                fundo.classList.remove('cor-manha')
+                fundo.classList.remove('cor-tarde')
+                msg.innerHTML = `Agora são ${hora} horas da noite!`
+            }
+        }
+    </script>
+</body>
+</html>

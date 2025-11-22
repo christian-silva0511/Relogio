@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="exercicio3">
+    <header>
+        <h1>Sortear um número</h1>
+    </header>
+    <section>
+        <div>           
+            <button id="meuBotao" onclick="verificarBotao()">Clique aqui</button>
+            <a href="#" title="Inativo" id="status">Inativo</a>            
+        </div>
+        <div>
+            <button id="resetar" onclick="resetar()">Resetar</button>
+        </div>
+    </section>
+
+    <script>
+        function verificarBotao(){
+            let status = document.getElementById('status')
+            status.title = "Título alterado!"
+            status.classList.add("teste")
+            status.innerHTML = "Texto alterado!"
+        }
+
+        function resetar(){
+            let status = document.getElementById('status')
+            status.title = "Inativo"
+            status.classList.remove("teste")
+            status.innerHTML = "Inativo"
+        }
+
+    </script>    
+</body>
+</html>
