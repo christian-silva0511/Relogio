@@ -1,1 +1,1 @@
-Arquivos de teste para praticar JS. Os códigos Java Script se encontram dentro do arquivo HTML.
+Trata-se de um código JS que mostra um relógio e uma mensagem de acordo com o horário do dia.
