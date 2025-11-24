@@ -25,4 +25,4 @@ if (hr >= 6 && hr < 12){
     info.innerHTML = `Boa noite!`
 }
 
-})
+}) 
