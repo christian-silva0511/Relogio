@@ -6,11 +6,9 @@
     <title>Relógio</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <header>
-        <h1>Relógio</h1>
-    </header>
-    <section class="relogio">
+<body class="rel">
+    <h1></h1>
+    <div class="relogio">
         <div id="hora">
             <span id="hr">00</span>
             <span class="down">horas</span>            
@@ -21,14 +19,15 @@
         </div>
         <div id="segundo">
             <span id="seg">00</span>
-            <span class="down">segundossasdadasdas</span>            
+            <span class="down">segundos</span>            
         </div>
-    </section>
+    </div>
 
     <script>
         const horas = document.getElementById('hr')
         const minutos = document.getElementById('min')
         const segundos = document.getElementById('seg')
+        const info = document.querySelector('h1')
 
         const relogio = setInterval(function time() {
         let dateToday = new Date();
@@ -43,6 +42,14 @@
         horas.textContent = hr;
         minutos.textContent = min;
         segundos.textContent = s;
+
+        if (hr >= 6 && hr < 12){
+            info.innerHTML = `Bom dia!`
+        }else if (hr >= 12 && hr < 18){
+            info.innerHTML = `Boa tarde!`
+        }else{
+            info.innerHTML = `Boa noite!`
+        }
 
     })
 
