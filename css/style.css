@@ -109,16 +109,29 @@ body.exercicio3 #mensagem{
 .rel{
     text-align: center;
 }
+.rel #imagem{
+    text-align: center;
+    max-width: 500px;
+    display: flex;
+    max-height: 250px;
+    margin: auto;
+    overflow: hidden;
+}
+.rel #imagem img{
+    border-radius: 8px;
+    max-width: 500px;
+}
 .rel h1{
     font-size: 32px;
     letter-spacing: -1px;
 }
+
 .relogio{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    margin-top: 50px;
     gap: 20px;
     
 }

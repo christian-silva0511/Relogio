@@ -2,6 +2,7 @@ const horas = document.getElementById('hr')
 const minutos = document.getElementById('min')
 const segundos = document.getElementById('seg')
 const info = document.querySelector('h1')
+const foto = document.getElementById('foto')
 
 const relogio = setInterval(function time() {
 let dateToday = new Date();
@@ -19,10 +20,13 @@ segundos.textContent = s;
 
 if (hr >= 6 && hr < 12){
     info.innerHTML = `Bom dia!`
+    foto.src = 'img/fotomanha.jpg'
 }else if (hr >= 12 && hr < 18){
     info.innerHTML = `Boa tarde!`
+    foto.src = '/img/fototarde.jpg'
 }else{
     info.innerHTML = `Boa noite!`
+    foto.src = '/img/fotonoite.jpg'
 }
  
 }) 
