@@ -2,109 +2,8 @@
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.link-aula{
-    font-size: 11px;
-    color: #666;
-}
 h1{
     font-size: 40px;
-}
-#msg{
-    padding: 10px 30px;
-    display: block;
-}
-#area{
-    background: green;
-    padding: 50px;
-}
-#res, #resultado{
-    margin-top: 30px;
-}
-
-.btSomar{
-    background: black;
-    color: white;
-}
-
-.sucesso{
-    color: green;
-}
-.erro{
-    color: red;
-}
-.atencao{
-    color: orange;
-}
-
-body#exercicio1{
-    background: #2966a3;
-}
-body#exercicio1 header{
-    text-align: center;
-    color: white;
-}
-body#exercicio1 section{
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 500px;
-    margin: auto;
-    box-shadow: 5px 5px 5px #333;
-    text-align: center;
-}
-body#exercicio1 footer{
-    text-align: center;
-    color: white;
-}
-body#exercicio1 #imagem{
-    width: 400px;
-}
-
-.cor-manha{
-    background: #d3d670!important;
-}
-.cor-tarde{
-    background: #eb8c06!important;
-}
-.cor-noite{
-    background: #121212!important;
-}
-
-
-/* EXERCÍCIO 3 */
-body.exercicio3{
-
-}
-body.exercicio3 span{
-    display: flex;
-    margin-bottom: 24px;
-    
-}
-body.exercicio3 #resultado{
-    display: flex;
-}
-body.exercicio3 #mensagem{
-    margin-bottom: 24px;
-}
-.botao-ativo{
-    background: green;
-    color: white;
-}
-
-.abas{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-.abas a{
-    padding: 16px;
-    display: block;
-}
-.abas .active{
-    background: black;
-}
-.abas .active a{
-    color: white;
 }
 .rel{
     text-align: center;
@@ -125,15 +24,13 @@ body.exercicio3 #mensagem{
     font-size: 32px;
     letter-spacing: -1px;
 }
-
 .relogio{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 50px;
-    gap: 20px;
-    
+    gap: 20px;    
 }
 .relogio div{
     text-align: center;
